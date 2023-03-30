@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/bootstrap.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/style.scss">
+    <title>Bank</title>
+</head>
+<body>
+   <div class="alldiv">
+   <h3>Kredit kalkulyatoru</h3>
+     <p class="loanamount">Kredit məbləği</p>
+     <div class="input">
+        <input type="text" class="loaninp" placeholder="AZN" id="inp1" oninput="loansay()">
+     </div>
+      <div class="slidecontainer">
+        <input type="range" min="300" max="30000" value="0" class="slider" id="myRange" oninput="change()">
+      </div>
+      <div class="container-fluid">
+        <div class="row ">
+            <div class="col-lg-5">
+                <div class="left">
+                    <p>Kredit müddəti</p>
+                    <input type="text" class="timeinp" placeholder="Ay" oninput="timesay()" id="timeinp">
+                </div>
+                <div class="slidecontainer2">
+                    <input type="range" min="3" max="48" value="0" class="slider" id="myRange2" oninput="change2()">
+                  </div>    
+            </div>
+            <div class="col-lg-6">
+                <div class="right">
+                    <p>Faiz dərəcəsi</p>
+                    <input type="text" class="rateinp" placeholder="%" id="rateinp" oninput="ratesay()">
+                    <div class="slidecontainer3">
+                        <input type="range" min="12" max="18" value="0" class="slider" id="myRange3" oninput="change3()">
+                      </div>  
+                </div>
+                
+            </div>
+        </div>
+         <button onclick="Calc()" class="buttoncalc"> <span class="text-white">Hesabla</span></button>
+      </div>
+   </div>
+
+
+    
+
+
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>
